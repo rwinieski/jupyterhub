@@ -1,4 +1,4 @@
-# jupyterhube
+# jupyterhub
 
 Copier ces fichiers dans un dossier /home/$USER/jupyterhub
 
