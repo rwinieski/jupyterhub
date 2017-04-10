@@ -6,8 +6,6 @@ RUN wget https://raw.githubusercontent.com/lcolombier/jupyterhub/master/jupyterh
 RUN pip install jupyter
 
 # Install R
-#RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 51716619E084DAB9
-#RUN echo "deb http://cran.irsn.fr/bin/linux/ubuntu jessie/" >> /etc/apt/sources.list.d/R.list
 RUN apt-get update
 RUN apt-get install -y r-base r-base-dev
 
@@ -16,5 +14,6 @@ RUN openssl rand -hex 1024 > configproxy.token
 RUN openssl rand -hex 32 > cookie.secret
 RUN mkdir -p /mnt/jupyterhub
 
-RUN wget https://raw.githubusercontent.com/lcolombier/jupyterhub/master/setup_r_kernel.R -O /opt
+# Install kernel R
+RUN wget https://raw.githubusercontent.com/lcolombier/jupyterhub/master/setup_r_kernel.R -O /opt/setup_r_kernel.R
 RUN R -f /opt/setup_R_kernel.R
