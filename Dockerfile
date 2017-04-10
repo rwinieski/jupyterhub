@@ -16,4 +16,4 @@ RUN mkdir -p /mnt/jupyterhub
 
 # Install kernel R
 RUN wget https://raw.githubusercontent.com/lcolombier/jupyterhub/master/setup_r_kernel.R -O /opt/setup_r_kernel.R
-RUN R -f /opt/setup_R_kernel.R
+RUN R -f /opt/setup_r_kernel.R
