@@ -6,8 +6,8 @@ RUN wget https://raw.githubusercontent.com/lcolombier/jupyterhub/master/jupyterh
 RUN pip install jupyter
 
 # Install R
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 51716619E084DAB9
-RUN echo "deb http://cran.irsn.fr/bin/linux/ubuntu jessie/" >> /etc/apt/sources.list.d/R.list
+#RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 51716619E084DAB9
+#RUN echo "deb http://cran.irsn.fr/bin/linux/ubuntu jessie/" >> /etc/apt/sources.list.d/R.list
 RUN apt-get update
 RUN apt-get install -y r-base r-base-dev
 RUN R IRkernel::installspec()
