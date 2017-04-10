@@ -5,9 +5,6 @@ RUN useradd -d /home/laurent -m -p laurent laurent
 RUN wget https://raw.githubusercontent.com/lcolombier/jupyterhub/master/jupyterhub_config.py -O /srv/jupyterhub/jupyterhub_config.py
 RUN pip install jupyter
 
-RUN apt-get install -y nano
-RUN export TERM=xterm
-
 # Install R
 #RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 51716619E084DAB9
 #RUN echo "deb http://cran.irsn.fr/bin/linux/ubuntu jessie/" >> /etc/apt/sources.list.d/R.list
