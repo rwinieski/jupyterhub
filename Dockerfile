@@ -7,8 +7,7 @@ RUN pip install jupyter
 
 # Install R
 RUN apt-get update
-RUN apt-get install -y apt-utils libcurl4-openssl-dev libssl-dev
-RUN apt-get install -y r-base r-base-dev
+RUN apt-get install -y libcurl4-openssl-dev libxml2-dev libxslt-dev libssl-dev r-base r-base-dev
 
 WORKDIR /opt
 RUN openssl rand -hex 1024 > configproxy.token
