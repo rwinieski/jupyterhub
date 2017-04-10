@@ -7,7 +7,7 @@ RUN pip install jupyter
 
 # Install R
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 51716619E084DAB9
-RUN echo "deb http://cran.irsn.fr/bin/linux/ubuntu trusty/" >> /etc/apt/sources.list.d/R.list
+RUN echo "deb http://cran.irsn.fr/bin/linux/ubuntu xenial/" >> /etc/apt/sources.list.d/R.list
 RUN apt-get update
 RUN apt-get install -y r-base r-base-dev
 RUN R IRkernel::installspec()
