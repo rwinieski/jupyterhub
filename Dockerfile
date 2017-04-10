@@ -6,8 +6,8 @@ RUN wget https://raw.githubusercontent.com/lcolombier/jupyterhub/master/jupyterh
 RUN pip install jupyter
 
 # Install R
-RUN apt-get install -y libcurl4-openssl-dev libssl-dev
 RUN apt-get update
+RUN apt-get install -y libcurl4-openssl-dev libssl-dev
 RUN apt-get install -y r-base r-base-dev
 
 WORKDIR /opt
