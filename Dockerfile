@@ -16,5 +16,5 @@ RUN openssl rand -hex 1024 > configproxy.token
 RUN openssl rand -hex 32 > cookie.secret
 RUN mkdir -p /mnt/jupyterhub
 
-
+RUN wget https://raw.githubusercontent.com/lcolombier/jupyterhub/master/setup_r_kernel.R -O /opt
 RUN R -f /opt/setup_R_kernel.R
