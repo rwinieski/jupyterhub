@@ -14,5 +14,11 @@ RUN apt-get install -y r-base r-base-dev
 WORKDIR /opt
 RUN openssl rand -hex 1024 > configproxy.token
 RUN openssl rand -hex 32 > cookie.secret
-
 RUN mkdir -p /mnt/jupyterhub
+
+RUN echo "chooseCRANmirror(57)" >> /opt/setup_R_kernel
+RUN echo "install.packages(c('pbdZMQ', 'repr', 'devtools'))" >> /opt/setup_R_kernel
+RUN echo "devtools::install_github('IRkernel/IRdisplay')" >> /opt/setup_R_kernel
+RUN echo "devtools::install_github('IRkernel/IRkernel')" >> /opt/setup_R_kernel
+RUN echo "IRkernel::installspec(user = FALSE)"  >> /opt/setup_R_kernel
+RUN R -f /opt/setup_R_kernel
