@@ -1,0 +1,5 @@
+dir.create(Sys.getenv("R_LIBS_USER"), showWarnings = FALSE, recursive = TRUE)
+install.packages("pbdZMQ", repos = "http://cran.irsn.fr/")
+devtools::install_github('IRkernel/IRdisplay')
+devtools::install_github('IRkernel/IRkernel')
+IRkernel::installspec(user = FALSE)
