@@ -5,7 +5,9 @@ RUN useradd -d /home/laurent -m -p laurent laurent
 RUN wget https://raw.githubusercontent.com/lcolombier/jupyterhub/master/jupyterhub_config.py -O /srv/jupyterhub/jupyterhub_config.py
 RUN pip install jupyter
 
+
 # Install R
+RUN apt-get install libcurl4-openssl-dev libssl-dev
 RUN apt-get update
 RUN apt-get install -y r-base r-base-dev
 
