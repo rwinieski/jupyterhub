@@ -1,3 +1,4 @@
+options(download.file.method = "wget")
 install.packages('repr',repos="http://cran.univ-paris1.fr/")
 install.packages('IRdisplay',repos="http://cran.univ-paris1.fr/")
 install.packages('evaluate',repos="http://cran.univ-paris1.fr/")
