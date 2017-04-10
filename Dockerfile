@@ -10,3 +10,9 @@ RUN pip install jupyter
 #RUN echo "deb http://cran.irsn.fr/bin/linux/ubuntu jessie/" >> /etc/apt/sources.list.d/R.list
 RUN apt-get update
 RUN apt-get install -y r-base r-base-dev
+
+WORKDIR /opt
+RUN openssl rand -hex 1024 > configproxy.token
+RUN openssl rand -hex 32 > cookie.secret
+
+RUN mkdir -p /mnt/jupyterhub
