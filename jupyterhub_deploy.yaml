@@ -1,9 +1,12 @@
 kind: Deployment
 metadata:
   labels:
-  app : jupyterhub
-  name : jupyterhub
-  namespace : jupyterhub
+    run: jupyterhub
+  name: jupyterhub
+  namespace: default
+  resourceVersion: "426209"
+  selfLink: /apis/extensions/v1beta1/namespaces/default/deployments/jupyterhub
+  uid: 1fa35062-1ec5-11e7-a4d6-000d3a254011
 spec:
   replicas: 1
   selector:
