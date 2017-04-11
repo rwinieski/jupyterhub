@@ -1,9 +1,9 @@
 kind: Deployment
 metadata:
   labels:
-    run: jupyterhub
-  name: jupyterhub
-  namespace: jupyterhub
+  app : jupyterhub
+  name : jupyterhub
+  namespace : jupyterhub
 spec:
   replicas: 1
   selector:
