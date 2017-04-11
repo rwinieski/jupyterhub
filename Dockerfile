@@ -1,4 +1,5 @@
 FROM jupyterhub/jupyterhub:latest
+RUN apt-get update
 
 # Install jupyterhub
 RUN useradd -d /home/laurent -m -p laurent laurent
@@ -6,8 +7,9 @@ RUN wget https://raw.githubusercontent.com/lcolombier/jupyterhub/master/jupyterh
 RUN pip install jupyter
 
 # Install R
+RUN apt-get install apt-transport-https
 RUN echo "deb https://cran.univ-paris1.fr/bin/linux/ubuntu xenial/" >> /etc/apt/sources.list.d/R.list
-RUN apt-get update
+
 RUN apt-get install -y libcurl4-openssl-dev libxml2-dev libxslt-dev libssl-dev r-base=3.2.3-4 r-base-dev=3.2.3-4
 
 WORKDIR /opt
