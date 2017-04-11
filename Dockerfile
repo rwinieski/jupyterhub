@@ -10,8 +10,9 @@ RUN pip install jupyter
 RUN apt-get install apt-transport-https
 RUN apt-key adv --keyserver keys.gnupg.net --recv-key 6212B7B7931C4BB16280BA1306F90DE5381BA480
 RUN echo "deb https://cran.univ-paris1.fr/bin/linux/debian jessie-cran3/" >> /etc/apt/sources.list.d/R.list
+
 RUN apt-get update
-RUN apt-get install -y r-base r-base-dev
+RUN apt-get install -y libcurl4-gnutls-dev libssl-dev r-base r-base-dev
 
 WORKDIR /opt
 RUN openssl rand -hex 1024 > configproxy.token
