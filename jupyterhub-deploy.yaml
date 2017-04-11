@@ -12,7 +12,7 @@
       spec:
         containers:
         - name: hub
-          image: /jupyterhub:latest
+          image: jupyterhub:with_R
           livenessProbe:
             exec:
               command: ["bash", "-c", "bash -c 'timeout -s 9 -k 10s 5s sed -n \"1w /mnt/jupyterhub/podhealth\" <<< \"$(date +%F_%H:%M:%S)\" && echo ok'"]
@@ -83,10 +83,4 @@
               cpu: 100m
               memory: 1000Mi
         volumes:
-        - name: nfs
-          nfs:
-            server: <FILER_IP>  
-            path: "<FILER_PATH>"
-        - name: manifests
-          configMap:
-          name: jhub-manifests
+        - name: gluster_pvc
