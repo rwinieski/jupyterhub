@@ -34,6 +34,4 @@ spec:
           - name: gluster-vc
             mountPath: /home/
         volumes:
-          - name: gluster-vc
-            persistentVolumeClaim:
-             claimName: pvc-63d99004-1c92-11e7-a4d6-000d3a254011
+          - name: pvc-63d99004-1c92-11e7-a4d6-000d3a254011
