@@ -1,0 +1,16 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: jupyterhub-deployement
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: jupyterhub
+    spec:
+      containers:
+      - name: jupyterhub
+        image: jupyterhub/withR
+        ports:
+        - containerPort: 8000
