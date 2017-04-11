@@ -31,6 +31,6 @@
       volumes:
         - name: gluster-vc
           glusterfs:
-            endpoints: heketi
+            endpoints: heketi-storage-endpoints
             path: pvc-63d99004-1c92-11e7-a4d6-000d3a254011
             readOnly: false
