@@ -23,8 +23,8 @@
           - containerPort: 8081
           - containerPort: 8000
           volumeMounts:
-            - mountPath: /dev/sdc
-              name: glusterfsvol
+            - mountPath: /home/
+              name: pvc-63d99004-1c92-11e7-a4d6-000d3a254011
           resources:
             requests:
               cpu: 100m
