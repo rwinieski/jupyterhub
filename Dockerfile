@@ -10,7 +10,7 @@ RUN pip install jupyter
 RUN apt-get install apt-transport-https
 RUN echo "deb https://cran.univ-paris1.fr/bin/linux/ubuntu xenial/" >> /etc/apt/sources.list.d/R.list
 RUN apt-get update
-RUN apt-get install -y libcurl4-openssl-dev libxml2-dev libxslt-dev libssl-dev r-base r-base-dev
+RUN apt-get install -y libcurl4-openssl-dev libxml2-dev libxslt-dev libssl-dev r-base-core r-recommended
 
 WORKDIR /opt
 RUN openssl rand -hex 1024 > configproxy.token
