@@ -26,9 +26,10 @@ spec:
         name: jupyterhub
         ports:
           - containerPort: 8000
-        resources: {}
-        terminationMessagePath: /dev/termination-log
-      dnsPolicy: ClusterFirst
-      restartPolicy: Always
-      securityContext: {}
-      terminationGracePeriodSeconds: 30
+        volumeMounts:
+          - name: gluster-vc
+            mountPath: /home/
+        volumes:
+          - name: gluster-vc
+            persistentVolumeClaim:
+             claimName: pvc-63d99004-1c92-11e7-a4d6-000d3a254011
