@@ -1,10 +1,10 @@
 # jupyterhub + kernel R
 
 ## Download github jupyterhub
-> mkdir /home/<user>/jupyterhub
-> cd jupyterhub
-> git init
-> get pull https://github.com/lcolombier/jupyterhub
+< mkdir /home/<user>/jupyterhub>
+< cd jupyterhub>
+< git init>
+< get pull https://github.com/lcolombier/jupyterhub>
 
 ## Build de l'image docker
 > docker build ../jupyterhub -t  jupyterhub:withR
