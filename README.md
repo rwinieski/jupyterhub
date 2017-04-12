@@ -1,7 +1,7 @@
 # jupyterhub + kernel R
 
 # Download github jupyterhub
-mkdir /home/<user>/jupyterhub
+mkdir /home/<user>/jupyterhub \n
 cd jupyterhub
 git init
 get pull https://github.com/lcolombier/jupyterhub
