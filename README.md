@@ -1,4 +1,4 @@
-# jupyterhub
+# jupyterhub + kernel R
 
 # Download github jupyterhub
 mkdir /home/<user>/jupyterhub
