@@ -25,13 +25,16 @@ spec:
         run: jupyterhub
     spec:
       containers:
-      - image: jupyterhub:withRv1
+      - image: jupyterhub:withR
         imagePullPolicy: IfNotPresent
         name: jupyterhub
         ports:
           - containerPort: 8000
         volumeMounts:
-          - name: gluster-vc
+          - name: gluster-vol1
             mountPath: /home/
-        volumes:
-          - name: pvc-63d99004-1c92-11e7-a4d6-000d3a254011
+  volumes:
+  - name: gluster-vol1
+    persistentVolumeClaim:
+      claimName: gluster-vc
+
